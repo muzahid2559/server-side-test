@@ -1,18 +1,22 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import fetch from 'cross-fetch';
 import axios from 'axios';
 
 class App extends Component{
   componentDidMount(){
-    // let a = fetch('https://jsonplaceholder.typicode.com/posts')
-    // .then(response => response.json)
-    // .then(data => console.log(data));
+    // axios.get('http://localhost:3001/dishes')
+    // .then(response => response.data)
+    // .then(data => console.log(data))
+    // .catch(error => console(error.message));
 
-    axios.get('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.data)
-    .then(data => console.log(data));
+    // axios.post(' http://localhost:3001/dishes',{name:"Pizza", price:"799"})
+    // .then(response => console.log(response));
+
+    //  axios.put(' http://localhost:3001/dishes/1',{name:"Cheese cake", price:"250"})
+    //  .then(response => console.log(response));
+
+    axios.delete(' http://localhost:3001/dishes/0')
+    .then(response => console.log(response));
 
 
   }
